@@ -144,9 +144,6 @@ public class Calculator extends VBox implements EventHandler<ActionEvent>{
 		else if (value.equals("+") || value.equals("-")|| value.equals("/")|| value.equals("*")){
 			if (!(number1.isEmpty())){
 				operator = value;}
-			else {
-				displayText.setText("Syntax Error (Debes poner un numero primero)");
-			}
 		}
 
 
@@ -178,7 +175,7 @@ public class Calculator extends VBox implements EventHandler<ActionEvent>{
                 }
                 case "/" -> {
                     if (number2int == 0) {
-                        displayText.setText("Math Error (No puedes dividir por 0 X0)");
+                        displayText.setText("Math Error");
                     } else {
                         int operacion4 = number1int / number2int;
                         displayText.setText(Integer.toString(operacion4));
